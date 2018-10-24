@@ -1,13 +1,5 @@
-# Product Name
-> For building QT5 on Raspberry Pi Zero W
-
- 
-
-## Installation
-
 # Building Qt 5.10 for Raspberry Pi on Rasbian Stretch [![Not Tested!]
-
-reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
+>reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
 
 ### Build Qt for Raspberry Pi
 Download the Qt 5.10.1 source archive
