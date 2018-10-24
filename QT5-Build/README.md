@@ -1,5 +1,4 @@
 # Building Qt   
-
 _Not verified yet!＿
 
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
@@ -22,45 +21,36 @@ Install optional development packages
     apt-get install pulseaudio libpulse-dev
 
 Support for various databases (PostgreSQL, MariaDB/MySQL) 	
-
     apt-get install libpq-dev libmariadbclient-dev
     
 Printing support using CUPS
-
     apt-get install libcups2-dev
     
 Wayland support 	
-
     apt-get install libwayland-dev
     
 X11 support 	
-
     apt-get install libx11-dev libxcb1-dev libxkbcommon-x11-dev libx11-xcb-dev libxext-dev
     
 Accessibility 	
-
     apt-get install libatspi-dev
 
-Broadcom EGL library filename fix
-
-    On Raspbian Stretch the OpenGL library files have been renamed (1, 2)so that they wouldn't conflict with Mesa installed ones. Unfortunately Qt configure script is still looking for the old names. There are a couple of solutions for this:
-    Run rpi-update and install bleading edge firmware and kernel. Then you are done. (Author had done this and therefor hadn't noticed this issue, sorry about that)
-    Patch the Qt configuration to look for the correct libraries. See QTBUG-62216 for details.
-    Create symlink manually.
-    In /opt/vc/lib run:
-
+### Broadcom EGL library filename fix
+On Raspbian Stretch the OpenGL library files have been renamed (1, 2)so that they wouldn't conflict with Mesa installed ones. Unfortunately Qt configure script is still looking for the old names. There are a couple of solutions for this:
+Run rpi-update and install bleading edge firmware and kernel. Then you are done. (Author had done this and therefor hadn't noticed this issue, sorry about that)
+Patch the Qt configuration to look for the correct libraries. See QTBUG-62216 for details.
+Create symlink manually.
+In /opt/vc/lib run:
     sudo ln -s libbrcmEGL.so libEGL.so
     sudo ln -s libbrcmGLESv2.so libGLESv2.so
     sudo ln -s libbrcmOpenVG.so libOpenVG.so
     sudo ln -s libbrcmWFC.so libWFC.so
 
 Create a shadow build directory outside of the Qt source tree
-
     mkdir build
     cd build
 
-Configure the Qt build
-
+### Configure the Qt build
 For some odd reason Qt insists on being configured for cross-compiling, even when doing a native build. Fortunately we can work around it by specifying a couple of extra parameters to get everything detected properly.
 
 You can choose to build a generic build that will work on all of the various Pi versions or specifc one that is optimized for your specific type of board. Choose one of:
@@ -73,8 +63,7 @@ linux-rasp-pi3-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3
 linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Using experimental VC4 KMS driver.
 
 
-###Run configure with the following options:
-
+### Run configure with the following options:
     PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
     PKG_CONFIG_SYSROOT_DIR=/ \
     ../qt-everywhere-src-5.10.1/configure -v -opengl es2 -eglfs -no-gtk \
@@ -93,14 +82,11 @@ Make sure that the configure script detects Raspberry Pi EGLFS, look for the fol
         EGLFS Rasberry Pi .................... yes
 Now Qt should be configured properly.
 
-###Compile Qt
+### Compile Qt
 To compile run:
-
     make
 
-
 If all is well, install Qt by running
-
     make install
 
 You should now have Qt 5.11 installed in /opt/Qt5.11 ready for use.  You can choose the platform binaries will run against by suppling the "-platform" paramter when running them.
