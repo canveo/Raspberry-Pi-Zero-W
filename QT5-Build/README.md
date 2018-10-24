@@ -46,12 +46,14 @@ Run rpi-update and install bleading edge firmware and kernel. Then you are done.
 Patch the Qt configuration to look for the correct libraries. See QTBUG-62216 for details.
 Create symlink manually.
 In /opt/vc/lib run:
+
     sudo ln -s libbrcmEGL.so libEGL.so
     sudo ln -s libbrcmGLESv2.so libGLESv2.so
     sudo ln -s libbrcmOpenVG.so libOpenVG.so
     sudo ln -s libbrcmWFC.so libWFC.so
 
 Create a shadow build directory outside of the Qt source tree
+
     mkdir build
     cd build
 
