@@ -1,4 +1,4 @@
-# Building Qt 5.10 for Raspberry Pi on Rasbian Stretch [![Not Tested!]
+# Building Qt  [![Not Tested]}
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
 
 ### Build Qt for Raspberry Pi
