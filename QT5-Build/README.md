@@ -41,8 +41,8 @@ Accessibility
     apt-get install libatspi-dev
 
 ### Broadcom EGL library filename fix
-On Raspbian Stretch the OpenGL library files have been renamed (1, 2)so that they wouldn't conflict with Mesa installed ones. Unfortunately Qt configure script is still looking for the old names. There are a couple of solutions for this:
-Run rpi-update and install bleading edge firmware and kernel. Then you are done. (Author had done this and therefor hadn't noticed this issue, sorry about that)
+On Raspbian Stretch the OpenGL library files have been renamed so that they wouldn't conflict with Mesa installed ones. Unfortunately Qt configure script is still looking for the old names. There are a couple of solutions for this:
+Run rpi-update and install bleading edge firmware and kernel. Then you are done. 
 Patch the Qt configuration to look for the correct libraries. See QTBUG-62216 for details.
 Create symlink manually.
 In /opt/vc/lib run:
