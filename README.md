@@ -5,3 +5,4 @@ Stuff on Pi-Zero-W
 ```
 
 ```
+![screen shot](./RaspberryZeroW.png)
