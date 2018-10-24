@@ -1,4 +1,4 @@
-# Building Qt   
+# Building Qt 5.11   
  _Not verified yet!_
 
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
@@ -72,12 +72,12 @@ linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Usin
 
     PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
     PKG_CONFIG_SYSROOT_DIR=/ \
-    ../qt-everywhere-src-5.10.1/configure -v -opengl es2 -eglfs -no-gtk \
+    ../qt-everywhere-src-5.11.2/configure -v -opengl es2 -eglfs -no-gtk \
     -device linux-rasp-pi-g++ -device-option CROSS_COMPILE=/usr/bin/ \
     -opensource -confirm-license -release -reduce-exports \
     -force-pkg-config -no-kms -nomake examples -no-compile-examples -no-pch \
     -skip qtwayland -skip qtwebengine -no-feature-geoservices_mapboxgl \
-    -qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -prefix /opt/Qt5.10
+    -qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -prefix /opt/Qt5.11
     
 Make sure that the configure script detects Raspberry Pi EGLFS, look for the following output:
 QPA backends:
