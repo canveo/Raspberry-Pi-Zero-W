@@ -1,8 +1,8 @@
-# Building Qt 5.11   
+# Building Qt 5.11 w/ Raspberry Pi Zero W   
  _Not verified yet!_
 
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
-### Build Qt for Raspberry Pi
+ 
 Download the Qt 5.11.2 source archive
 
     wget http://download.qt.io/official_releases/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
