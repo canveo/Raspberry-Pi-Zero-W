@@ -81,6 +81,7 @@ linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Usin
     
 Make sure that the configure script detects Raspberry Pi EGLFS, look for the following output:
 QPA backends:
+
     DirectFB ............................... no
     EGLFS .................................. yes
     EGLFS details:
