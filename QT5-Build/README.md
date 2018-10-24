@@ -73,8 +73,7 @@ linux-rasp-pi3-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3
 linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Using experimental VC4 KMS driver.
 
 
-Run configure with the following options:
-
+###Run configure with the following options:
 
     PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
     PKG_CONFIG_SYSROOT_DIR=/ \
@@ -85,18 +84,16 @@ Run configure with the following options:
     -skip qtwayland -skip qtwebengine -no-feature-geoservices_mapboxgl \
     -qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -prefix /opt/Qt5.10
     
-
 Make sure that the configure script detects Raspberry Pi EGLFS, look for the following output:
-QPA backends:
-  DirectFB ............................... no
-  EGLFS .................................. yes
-  EGLFS details:
-...
-    EGLFS Rasberry Pi .................... yes
-
+    QPA backends:
+        DirectFB ............................... no
+        EGLFS .................................. yes
+        EGLFS details:
+    ...
+        EGLFS Rasberry Pi .................... yes
 Now Qt should be configured properly.
-Compile Qt
 
+###Compile Qt
 To compile run:
 
     make
