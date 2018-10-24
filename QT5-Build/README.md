@@ -106,10 +106,10 @@ You should now have Qt 5.11 installed in /opt/Qt5.11 ready for use.  You can cho
 Markdown | Less | Pretty
 --- | --- | ---
 
-    Qt Platform option examples | Platform 	| Parameter
-    --- | --- | --- |
-    X11 	| -platform | xcb
-    VNC 	| -platform | vnc
-    WebGL 	| -platform | webgl
+Qt Platform option examples | Platform 	| Parameter
+--- | --- | ---  
+X11 	| -platform | xcb
+VNC 	| -platform | vnc
+WebGL 	| -platform | webgl
 
 
