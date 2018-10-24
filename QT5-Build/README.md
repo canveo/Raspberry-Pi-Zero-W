@@ -102,10 +102,10 @@ If all is well, install Qt by running
     make install
 
 You should now have Qt 5.11 installed in /opt/Qt5.11 ready for use.  You can choose the platform binaries will run against by suppling the "-platform" paramter when running them.
-    |Qt Platform option examples | Platform 	| Parameter
-    |---|---|---|
-    |X11 	| -platform | xcb
-    |VNC 	| -platform | vnc
-    |WebGL 	| -platform | webgl
+    Qt Platform option examples | Platform 	| Parameter
+    --- | --- | --- |
+    X11 	| -platform | xcb
+    VNC 	| -platform | vnc
+    WebGL 	| -platform | webgl
 
 
