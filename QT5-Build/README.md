@@ -2,16 +2,16 @@
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
 
 ### Build Qt for Raspberry Pi
-Download the Qt 5.10.1 source archive
+Download the Qt 5.11.2 source archive
 
-    wget http://download.qt.io/official_releases/qt/5.10/5.10.1/single/qt-everywhere-src-5.10.1.tar.xz
-    tar xf qt-everywhere-src-5.10.1.tar.xz
+    wget http://download.qt.io/official_releases/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
+    tar xf qt-everywhere-src-5.11.2.tar.xz
 
 Install required build dependencies
 
     apt-get update
-    apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev         libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
-
+    apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev    libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
+    
 Install optional development packages
 
     apt-get install bluez libbluetooth-dev
