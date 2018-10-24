@@ -10,27 +10,27 @@ tar xf qt-everywhere-src-5.10.1.tar.xz
 
 Install required build dependencies
 
-apt-get update
-apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
+    apt-get update
+    apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev                   libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
 
 Install optional development packages
 
-apt-get install bluez libbluetooth-dev
-apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa
-apt-get install libasound2-dev
-apt-get install pulseaudio libpulse-dev
+    apt-get install bluez libbluetooth-dev
+    apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa
+    apt-get install libasound2-dev
+    apt-get install pulseaudio libpulse-dev
 
 Support for various databases (PostgreSQL, MariaDB/MySQL) 	
-apt-get install libpq-dev libmariadbclient-dev
+    apt-get install libpq-dev libmariadbclient-dev
 Printing support using CUPS
-apt-get install libcups2-dev
+    apt-get install libcups2-dev
 Wayland support 	
-apt-get install libwayland-dev
+    apt-get install libwayland-dev
 X11 support 	
-apt-get install libx11-dev libxcb1-dev libxkbcommon-x11-dev libx11-xcb-dev libxext-dev
+    apt-get install libx11-dev libxcb1-dev libxkbcommon-x11-dev libx11-xcb-dev libxext-dev
 
 Accessibility 	
-apt-get install libatspi-dev
+    apt-get install libatspi-dev
 
 Broadcom EGL library filename fix
 On Raspbian Stretch the OpenGL library files have been renamed (1, 2)so that they wouldn't conflict with Mesa installed ones. Unfortunately Qt configure script is still looking for the old names. There are a couple of solutions for this:
@@ -49,8 +49,8 @@ On Raspbian Stretch the OpenGL library files have been renamed (1, 2)so that the
 Create a shadow build directory outside of the Qt source tree
 We will build Qt outside of the source tree, this way you can easily have different build version and easily also start over in case of any issues. You build location can be anywhere where there is enough space, for example an USB stick in case you are running out on your SD card. Remember to adjust any paths in the commands.
 
-mkdir build
-cd build
+    mkdir build
+    cd build
 
 Configure the Qt build
 
