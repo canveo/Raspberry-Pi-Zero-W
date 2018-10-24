@@ -1,5 +1,5 @@
 # Building Qt   
- _ Not verified yet! ＿
+ _Not verified yet!_
 
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
 ### Build Qt for Raspberry Pi
