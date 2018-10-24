@@ -63,11 +63,12 @@ For some odd reason Qt insists on being configured for cross-compiling, even whe
 
 You can choose to build a generic build that will work on all of the various Pi versions or specifc one that is optimized for your specific type of board. Choose one of:
 
-    Raspberry Pi ARM platform options | Platform option 	| Device
-    linux-rasp-pi-g++ 	| ARMv6 compatible version, resulting binaries will run on all Raspberry Pi models. | Default option and the only one tested to work!
-    linux-rasp-pi2-g++ 	| ARMv7 optimized version | runs on Raspberry Pi 2 & 3
-    linux-rasp-pi3-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3
-    linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Using experimental VC4 KMS driver.
+Raspberry Pi ARM platform options | Platform option 	| Device
+--- | --- | ---  
+linux-rasp-pi-g++ 	| ARMv6 compatible version| run on all Raspberry Pi models
+linux-rasp-pi2-g++ 	| ARMv7 optimized version | runs on Raspberry Pi 2 & 3
+linux-rasp-pi3-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3
+linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Using experimental VC4 KMS driver.
 
 
 Run configure with the following options:
@@ -103,10 +104,7 @@ If all is well, install Qt by running
 
 You should now have Qt 5.11 installed in /opt/Qt5.11 ready for use.  You can choose the platform binaries will run against by suppling the "-platform" paramter when running them.
 
-Markdown | Less | Pretty
---- | --- | ---
-
-Qt Platform option examples | Platform 	| Parameter
+Qt Platform option | Platform 	| Parameter
 --- | --- | ---  
 X11 	| -platform | xcb
 VNC 	| -platform | vnc
