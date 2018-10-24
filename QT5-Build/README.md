@@ -4,17 +4,14 @@ reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stre
 
 ##Build Qt for Raspberry Pi
 Download the Qt 5.10.1 source archive
-wget http://download.qt.io/official_releases/qt/5.10/5.10.1/single/qt-everywhere-src-5.10.1.tar.xz
-
-tar xf qt-everywhere-src-5.10.1.tar.xz
+    wget http://download.qt.io/official_releases/qt/5.10/5.10.1/single/qt-everywhere-src-5.10.1.tar.xz
+    tar xf qt-everywhere-src-5.10.1.tar.xz
 
 Install required build dependencies
-
     apt-get update
     apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev                   libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
 
 Install optional development packages
-
     apt-get install bluez libbluetooth-dev
     apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa
     apt-get install libasound2-dev
@@ -28,7 +25,6 @@ Wayland support
     apt-get install libwayland-dev
 X11 support 	
     apt-get install libx11-dev libxcb1-dev libxkbcommon-x11-dev libx11-xcb-dev libxext-dev
-
 Accessibility 	
     apt-get install libatspi-dev
 
