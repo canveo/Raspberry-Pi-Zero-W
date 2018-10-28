@@ -7,7 +7,7 @@ Reference:https://github.com/nomumu/Kinetic4RPiZero/
     sudo /opt/ros/kinetic/initialize.sh
 
 
-ros_kinetic_install_raspizero.bash
+example ros_kinetic_install_raspizero.bash
 
     sudo apt-get update
     sudo apt-get install -y build-essential gdebi
