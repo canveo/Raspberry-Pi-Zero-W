@@ -1,5 +1,12 @@
 ## ROS Kinetic installation on Raspberry Pi Zero/Raspberry Pi Zero W
 
+Reference:https://github.com/nomumu/Kinetic4RPiZero/
+
+    unzip rpi-zerow-kinetic_X.X.X-X_armhf.zip
+    sudo gdebi rpi-zerow-kinetic_X.X.X-X_armhf.deb
+    sudo /opt/ros/kinetic/initialize.sh
+
+
 ros_kinetic_install_raspizero.bash
 
     sudo apt-get update
