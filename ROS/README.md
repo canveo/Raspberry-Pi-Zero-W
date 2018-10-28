@@ -10,3 +10,11 @@ ros_kinetic_install_raspizero.bash
     sudo gdebi rpi-zerow-kinetic_1.0.0-1_armhf.deb
     sudo /opt/ros/kinetic/initialize.sh
 
+Setup
+
+    sudo rosdep init
+    rosdep update
+    echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+
+    roscore
