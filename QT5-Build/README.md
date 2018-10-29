@@ -2,6 +2,7 @@
  _Not verified yet!_
 
 >reference: http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
+
 >reference: https://github.com/tranter/raspberry-pi-qt-builds
  
 Download the Qt 5.11.2 source archive
