@@ -70,7 +70,7 @@ linux-rasp-pi3-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3
 linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Using experimental VC4 KMS driver.
 
 
-### Run configure with the following options:
+### Pi9W Run configure with the following options:
 
     PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
     PKG_CONFIG_SYSROOT_DIR=/ \
@@ -80,6 +80,16 @@ linux-rasp-pi3-vc4-g++ 	| ARMv8 optimized version | runs on Raspberry Pi 3. Usin
     -force-pkg-config -no-kms -nomake examples -no-compile-examples -no-pch \
     -skip qtwayland -skip qtwebengine -no-feature-geoservices_mapboxgl \
     -qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -prefix /opt/Qt5.11
+ ### Pi3B+ Run configure with the following options:
+
+    PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
+    PKG_CONFIG_SYSROOT_DIR=/ \
+    ../qt-everywhere-src-5.11.2/configure -v -opengl es2 -eglfs -no-gtk \
+    -device linux-rasp-pi3-g++ -device-option CROSS_COMPILE=/usr/bin/ \
+    -opensource -confirm-license -release -reduce-exports \
+    -force-pkg-config -no-kms -nomake examples -no-compile-examples -no-pch \
+    -skip qtwayland -skip qtwebengine -no-feature-geoservices_mapboxgl \
+    -qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -prefix /opt/Qt5.11   
     
 Make sure that the configure script detects Raspberry Pi EGLFS, look for the following output:
 QPA backends:
