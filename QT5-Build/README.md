@@ -1,4 +1,4 @@
-# Building Qt 5.11 w/ Raspberry Pi Zero W   
+# Building Qt 5.11 w/ Raspberry Pi3B+/Pi0W   
  _Not verified yet!_
 
 >reference: https://wiki.qt.io/Native_Build_of_Qt5_on_a_Raspberry_Pi
