@@ -49,6 +49,8 @@ Patch the Qt configuration to look for the correct libraries. See QTBUG-62216 fo
 Create symlink manually.
 In /opt/vc/lib run:
 
+    sudo rpi-update
+
     sudo ln -s libbrcmEGL.so libEGL.so
     sudo ln -s libbrcmGLESv2.so libGLESv2.so
     sudo ln -s libbrcmOpenVG.so libOpenVG.so
