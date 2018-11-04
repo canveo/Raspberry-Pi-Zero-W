@@ -12,15 +12,15 @@ Download the Qt 5.11.2 source archive
 
 Install required build dependencies
 
-    apt-get update
-    apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev    libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
+    sudo apt-get update
+    sudo apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev    libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
     
 Install optional development packages
 
-    apt-get install bluez libbluetooth-dev
-    apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa
-    apt-get install libasound2-dev
-    apt-get install pulseaudio libpulse-dev
+    sudo apt-get install bluez libbluetooth-dev
+    sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa
+    sudo apt-get install libasound2-dev
+    sudo apt-get install pulseaudio libpulse-dev
 
 Support for various databases (PostgreSQL, MariaDB/MySQL) 	
 
@@ -50,7 +50,7 @@ Create symlink manually.
 In /opt/vc/lib run:
 
     sudo rpi-update
-
+    
     sudo ln -s libbrcmEGL.so libEGL.so
     sudo ln -s libbrcmGLESv2.so libGLESv2.so
     sudo ln -s libbrcmOpenVG.so libOpenVG.so
