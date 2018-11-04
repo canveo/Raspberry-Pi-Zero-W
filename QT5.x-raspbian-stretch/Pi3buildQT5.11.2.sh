@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Update to latest firmware
+sudo raspi-update
+
 # Install QT5.11,2 on rasbian stretch 
 cd
 sudo apt-get -y --force-yes update
@@ -11,7 +14,7 @@ sudo apt-get install bluez libbluetooth-dev
 sudo apt-get install libasound2-dev pulseaudio libpulse-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa gstreamer-tools
 sudo apt-get install libpq-dev libmariadbclient-dev
 
-# Download QT 5.11.2 Source code
+# Download QT 5.11.2 Source code. (Use Browser to select different mirror when got stuck)
 wget http://download.qt.io/official_releases/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
 
 # Untar Source code
