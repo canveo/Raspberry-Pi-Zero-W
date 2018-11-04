@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install QT5.10.1 on rasbian stretch 
+# Install QT5.11,2 on rasbian stretch 
 cd
 sudo apt-get -y --force-yes update
 sudo apt-get -y --force-yes upgrade
@@ -11,22 +11,22 @@ sudo apt-get install bluez libbluetooth-dev
 sudo apt-get install libasound2-dev pulseaudio libpulse-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa gstreamer-tools
 sudo apt-get install libpq-dev libmariadbclient-dev
 
-# Download QT 5.10.1 Source code
-wget http://download.qt.io/official_releases/qt/5.10/5.10.1/single/qt-everywhere-src-5.10.1.tar.xz
+# Download QT 5.11.2 Source code
+wget http://download.qt.io/official_releases/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
 
 # Untar Source code
-tar xf qt-everywhere-src-5.10.1.tar.xz
+tar xvf qt-everywhere-src-5.11.2.tar.xz
 
 # Delete source tarball to save some space
-sudo rm -r qt-everywhere-src-5.10.1.tar.xz
+sudo rm -r qt-everywhere-src-5.11.2.tar.xz
 
 # Delete qmake.conf for Raspberry Pi3
-cd /home/pi/qt-everywhere-src-5.10.1/qtbase/mkspecs/devices/linux-rasp-pi3-g++
+cd /home/pi/qt-everywhere-src-5.11.2/qtbase/mkspecs/devices/linux-rasp-pi3-g++
 sudo rm qmake.conf
 
 # Download modified qmake.conf for Raspberry Pi3
 cd /home/pi/QT5.x-raspbian-stretch/qmakePi3
-sudo cp qmake.conf /home/pi/qt-everywhere-src-5.10.1/qtbase/mkspecs/devices/linux-rasp-pi3-g++
+sudo cp qmake.conf /home/pi/qt-everywhere-src-5.11.2/qtbase/mkspecs/devices/linux-rasp-pi3-g++
 
 # Create Shadow build directory 
 cd
@@ -38,7 +38,7 @@ sudo mkdir /opt/QT5
 sudo chown pi:pi /opt/QT5
 
 # Configure QT for Raspberry PI3 ARMv8
-PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig PKG_CONFIG_SYSROOT_DIR=/ \../qt-everywhere-src-5.10.1/configure -v -opengl es2 -eglfs -no-pch -no-gtk -device linux-rasp-pi3-g++ \-device-option CROSS_COMPILE=/usr/bin/ -opensource -confirm-license -reduce-exports \-force-pkg-config -nomake examples -no-compile-examples -skip qtwayland -skip qtwebengine -release \-qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -gstreamer -prefix /opt/QT5
+PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig PKG_CONFIG_SYSROOT_DIR=/ \../qt-everywhere-src-5.11.2/configure -v -opengl es2 -eglfs -no-pch -no-gtk -device linux-rasp-pi3-g++ \-device-option CROSS_COMPILE=/usr/bin/ -opensource -confirm-license -reduce-exports \-force-pkg-config -nomake examples -no-compile-examples -skip qtwayland -skip qtwebengine -release \-qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -gstreamer -prefix /opt/QT5
 
 
 # Compile QT with 4 cores 
@@ -66,4 +66,4 @@ sudo make install
 #sudo rm -r build
 
 # Delete source code folder
-#sudo rm -r qt-everywhere-opensource-src-5.9.4
+#sudo rm -r qt-everywhere-opensource-src-5.11.2
