@@ -27,12 +27,11 @@ sudo rm -r qt-everywhere-src-5.11.2.tar.xz
 cd /home/pi/qt-everywhere-src-5.11.2/qtbase/mkspecs/devices/linux-rasp-pi3-g++
 sudo rm qmake.conf
 
-# Download modified qmake.conf for Raspberry Pi3
-cd /home/pi/QT5.x-raspbian-stretch/qmakePi3
-sudo cp qmake.conf /home/pi/qt-everywhere-src-5.11.2/qtbase/mkspecs/devices/linux-rasp-pi3-g++
+# Download and replace modified qmake.conf for Raspberry Pi3
+ #cd /home/pi/QT5.x-raspbian-stretch/qmakePi3
+ #sudo cp qmake.conf /home/pi/qt-everywhere-src-5.11.2/qtbase/mkspecs/devices/linux-rasp-pi3-g++
 
-# Create Shadow build directory 
-cd
+# Create Shadow build directory beside qt-everywhere
 mkdir build
 cd build
 
@@ -41,7 +40,11 @@ sudo mkdir /opt/QT5
 sudo chown pi:pi /opt/QT5
 
 # Configure QT for Raspberry PI3 ARMv8
-PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig PKG_CONFIG_SYSROOT_DIR=/ \../qt-everywhere-src-5.11.2/configure -v -opengl es2 -eglfs -no-pch -no-gtk -device linux-rasp-pi3-g++ \-device-option CROSS_COMPILE=/usr/bin/ -opensource -confirm-license -reduce-exports \-force-pkg-config -nomake examples -no-compile-examples -skip qtwayland -skip qtwebengine -release \-qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -gstreamer -prefix /opt/QT5
+PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig PKG_CONFIG_SYSROOT_DIR=/ \
+../qt-everywhere-src-5.11.2/configure -v -opengl es2 -eglfs -no-pch -no-gtk -device linux-rasp-pi3-g++ \
+-device-option CROSS_COMPILE=/usr/bin/ -opensource -confirm-license -reduce-exports \
+-force-pkg-config -nomake examples -no-compile-examples -skip qtwayland -skip qtwebengine -release \
+-qt-pcre -ssl -evdev -system-freetype -fontconfig -glib -gstreamer -prefix /opt/QT5
 
 
 # Compile QT with 4 cores 
@@ -57,12 +60,12 @@ echo 'export LD_LIBRARY_PATH=/opt/QT5/lib' >> ~/.bashrc
 echo  'export PATH=/opt/QT5/bin:$PATH' >> ~/.bashrc 
 
 # Install Lorn Potters Sensehat Plugin on the system 
-mkdir /home/pi/senshatplugin
-git clone https://github.com/lpotter/qsensors-sensehatplugin.git /home/pi/senshatplugin
-cd /home/pi/senshatplugin
-qmake
-make -j4
-sudo make install
+ #mkdir /home/pi/senshatplugin
+ #git clone https://github.com/lpotter/qsensors-sensehatplugin.git /home/pi/senshatplugin
+ #cd /home/pi/senshatplugin
+ #qmake
+ #make -j4
+ #sudo make install
 
 # Delete shadow build directory
 #cd
