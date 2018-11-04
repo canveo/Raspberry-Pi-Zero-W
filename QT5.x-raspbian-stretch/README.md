@@ -1,33 +1,16 @@
-# QT5.10.1 -Raspbian-Stretch
+# QT5.11.2 -Raspbian-Stretch
 
-Automated installation scripts to compile QT5 on Raspbian Stretch for Raspberry PI with EGLFS support
-This whole process takes about 4-6 hours on a Raspberry Pi2. 
-Compile scripts for Pi2 (armV7) and Pi3 (armV8)
-The script is based on this tutorial http://www.tal.org/tutorials/building-qt-58-raspberry-pi-debian-stretch
-
-Usage :
-Download raspbian Stretch from:
-https://www.raspberrypi.org/downloads/raspbian/
-and install it on your SD card (the lite version will be enough) 
-
-After booting up your PI, follw the steps below :
-
+After booting up your new Raspbian, follw the steps below :
 
 Increase Rpi's swap size. As root, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE
 ```
 CONF_SWAPSIZE=2048
 ```
-
 Run dphys-swapfile setup which will create and initialize the file.
-
 ```
 $ sudo dphys-swapfile swapon
 ```
-
-Source : https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
-
 After increasing the swap size,
-
 ```
 $ sudo raspi-config
 ```
@@ -35,46 +18,25 @@ Set GPU to 256 and enable ssh (ssh is optional)
 ```
 $ sudo apt-get update
 ```
-```
-$ sudo apt-get install git
-```
 
 ```
-$ git clone https://github.com/MarkusIppy/QT5.x-raspbian-stretch.git
+$sudo chmod +x Pi3buildQT5.11.2.sh
 ```
 ```
-$ cd QT5.x-raspbian-stretch
-```
-Dependent if you want to install for Pi2 or Pi3
-
-For Pi2 :
-```
-$sudo chmod +x Pi2buildQT5.10.1.sh
-```
-```
-$./Pi2buildQT5.10.1.sh
-```
-
-
-For Pi3 :
-```
-$sudo chmod +x Pi3buildQT5.10.1.sh
-```
-```
-$./Pi3buildQT5.10.1.sh
+$./Pi3buildQT5.11.2.sh
 ```
 
 ```
 Configure summary:
 
 Building on: linux-g++ (arm, CPU features: <none>)
-Building for: devices/linux-rasp-pi2-g++ (arm, CPU features: neon)
+Building for: devices/linux-rasp-pi3-g++ (arm, CPU features: neon)
 Configuration: cross_compile use_gold_linker enable_new_dtags largefile neon precompile_header shared rpath release c++11 c++14 c++1z concurrent dbus reduce_exports stl
 Build options:
   Mode ................................... release
   Optimize release build for size ........ no
   Building shared libraries .............. yes
-  Using C++ standard ..................... C++1z
+  Using C++ standard ..................... C++14
   Using ccache ........................... no
   Using gold linker ...................... yes
   Using new DTAGS ........................ yes
@@ -263,7 +225,7 @@ Note: Dropped compiler flags '-pthread' when detecting library 'gstreamer_app'.
 
 Qt is now configured for building. Just run 'make'.
 Once everything is built, you must run 'make install'.
-Qt will be installed into '/opt/Qt5.9'.
+Qt will be installed into '/opt/Qt5.11'.
 
 Prior to reconfiguration, make sure you remove any leftovers from
 the previous build.
