@@ -109,8 +109,3 @@ Qt Gui:
 ```
 
 
-
-
-If everything is working you can delete the build folder as well as the source code folder 
-
-Happy coding :-)
