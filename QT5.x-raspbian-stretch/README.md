@@ -8,22 +8,22 @@ CONF_SWAPSIZE=2048
 ```
 Run dphys-swapfile setup which will create and initialize the file.
 ```
-$ sudo dphys-swapfile swapon
+  $ sudo swapon -s
+  $ sudo dphys-swapfile swapoff
+  $ sudo dphys-swapfile swapon
+  $ sudo swapon -s
 ```
 After increasing the swap size,
 ```
-$ sudo raspi-config
+  $ sudo raspi-config
 ```
 Set GPU to 256 and enable ssh (ssh is optional) 
 ```
-$ sudo apt-get update
-```
-
-```
-$sudo chmod +x Pi3buildQT5.11.2.sh
+  $ sudo apt-get update
+  $ sudo chmod +x Pi3buildQT5.11.2.sh
 ```
 ```
-$./Pi3buildQT5.11.2.sh
+  $./Pi3buildQT5.11.2.sh
 ```
 
 ```
@@ -102,133 +102,8 @@ Qt Gui:
     OpenGL ES 3.0 ........................ no
     OpenGL ES 3.1 ........................ no
   Session Management ..................... yes
-Features used by QPA backends:
-  evdev .................................. yes
-  libinput ............................... yes
-  INTEGRITY HID .......................... no
-  mtdev .................................. no
-  tslib .................................. no
-  xkbcommon-evdev ........................ yes
-QPA backends:
-  DirectFB ............................... no
-  EGLFS .................................. yes
-  EGLFS details:
-    EGLFS i.Mx6 .......................... no
-    EGLFS i.Mx6 Wayland .................. no
-    EGLFS EGLDevice ...................... no
-    EGLFS GBM ............................ no
-    EGLFS Mali ........................... no
-    EGLFS Raspberry Pi ................... yes
-    EGL on X11 ........................... no
-  LinuxFB ................................ yes
-  VNC .................................... yes
-  Mir client ............................. no
-  X11:
-    Using system-provided XCB libraries .. no
-    EGL on X11 ........................... no
-    Xinput2 .............................. no
-    XCB XKB .............................. yes
-    XLib ................................. no
-    XCB render ........................... yes
-    XCB GLX .............................. no
-    XCB Xlib ............................. no
-    Using system-provided xkbcommon ...... no
-Qt Widgets:
-  GTK+ ................................... no
-  Styles ................................. Fusion Windows
-Qt PrintSupport:
-  CUPS ................................... yes
-Qt Sql:
-  DB2 (IBM) .............................. no
-  InterBase .............................. no
-  MySql .................................. yes
-  OCI (Oracle) ........................... no
-  ODBC ................................... no
-  PostgreSQL ............................. yes
-  SQLite2 ................................ no
-  SQLite ................................. yes
-    Using system provided SQLite ......... no
-  TDS (Sybase) ........................... no
-Qt SerialBus:
-  Socket CAN ............................. yes
-  Socket CAN FD .......................... yes
-QtXmlPatterns:
-  XML schema support ..................... yes
-Qt QML:
-  QML interpreter ........................ yes
-  QML network support .................... yes
-Qt Quick:
-  Direct3D 12 ............................ no
-  AnimatedImage item ..................... yes
-  Canvas item ............................ yes
-  Support for Qt Quick Designer .......... yes
-  Flipable item .......................... yes
-  GridView item .......................... yes
-  ListView item .......................... yes
-  Path support ........................... yes
-  PathView item .......................... yes
-  Positioner items ....................... yes
-  ShaderEffect item ...................... yes
-  Sprite item ............................ yes
-Qt Gamepad:
-  SDL2 ................................... no
-Qt 3D:
-  Assimp ................................. yes
-  System Assimp .......................... no
-  Output Qt3D Job traces ................. no
-  Output Qt3D GL traces .................. no
-Qt 3D GeometryLoaders:
-  Autodesk FBX ........................... no
-Qt Bluetooth:
-  BlueZ .................................. yes
-  BlueZ Low Energy ....................... yes
-  Linux Crypto API ....................... yes
-Qt Sensors:
-  sensorfw ............................... no
-Qt Quick Controls 2:
-  Styles ................................. Default Material Universal
-Qt Quick Templates 2:
-  Hover support .......................... yes
-  Multi-touch support .................... yes
-Qt Positioning:
-  Gypsy GPS Daemon ....................... no
-  WinRT Geolocation API .................. no
-Qt Location:
-  Geoservice plugins:
-    OpenStreetMap ........................ yes
-    HERE ................................. yes
-    Esri ................................. yes
-    Mapbox ............................... yes
-    MapboxGL ............................. yes
-    Itemsoverlay ......................... yes
-Qt Multimedia:
-  ALSA ................................... yes
-  GStreamer 1.0 .......................... yes
-  GStreamer 0.10 ......................... no
-  Video for Linux ........................ yes
-  OpenAL ................................. no
-  PulseAudio ............................. yes
-  Resource Policy (libresourceqt5) ....... no
-  Windows Audio Services ................. no
-  DirectShow ............................. no
-  Windows Media Foundation ............... no
-
-Note: Also available for Linux: linux-clang linux-icc
-
-Note: Dropped compiler flags '-pthread' when detecting library 'glib'.
-
-Note: Disabling X11 Accessibility Bridge: D-Bus or AT-SPI is missing.
-
-Note: Dropped compiler flags '-pthread' when detecting library 'gstreamer'.
-
-Note: Dropped compiler flags '-pthread' when detecting library 'gstreamer_app'.
-
-Qt is now configured for building. Just run 'make'.
-Once everything is built, you must run 'make install'.
-Qt will be installed into '/opt/Qt5.11'.
-
-Prior to reconfiguration, make sure you remove any leftovers from
-the previous build.
+  ... 
+  
 ```
 
 
