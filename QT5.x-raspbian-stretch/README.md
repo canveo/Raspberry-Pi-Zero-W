@@ -1,10 +1,12 @@
 # QT5.11.2 -Raspbian-Stretch
 
+>reference[QT5.x-raspbian-stretch]: https://github.com/MarkusIppy/QT5.x-raspbian-stretch
+
 After booting up your new Raspbian, follw the steps below :
 
 Increase Rpi's swap size. As root, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE
 ```
-CONF_SWAPSIZE=2048
+  CONF_SWAPSIZE=2048
 ```
 Run dphys-swapfile setup which will create and initialize the file.
 ```
